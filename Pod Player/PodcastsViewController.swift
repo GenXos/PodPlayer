@@ -134,16 +134,57 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
         let cell = tableView.make(withIdentifier: "PodcastCell", owner: self) as? NSTableCellView
+        
+        let podcast = podcasts[row]
+        
+        if podcast.title != nil {
             
-            let podcast = podcasts[row]
-            
-            if podcast.title != nil {
-                
-                cell?.textField?.stringValue = podcast.title!
-            } else {
-                cell?.textField?.stringValue = "UNKNOWN TITLE"
-            }
-            return cell
+            cell?.textField?.stringValue = podcast.title!
+        } else {
+            cell?.textField?.stringValue = "UNKNOWN TITLE"
+        }
+        return cell
         
     }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        
+        if tableView.selectedRow >= 0 {
+            
+            let podcast = podcasts[tableView.selectedRow]
+            
+            
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

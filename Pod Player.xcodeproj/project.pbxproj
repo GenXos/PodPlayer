@@ -16,6 +16,7 @@
 		5FDAE7D61ED35E6A00C20EB2 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7D41ED35E6A00C20EB2 /* SWXMLHash.swift */; };
 		5FDAE7D71ED35E6A00C20EB2 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7D51ED35E6A00C20EB2 /* SWXMLHash+TypeConversion.swift */; };
 		5FDAE7DA1ED4B77D00C20EB2 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7D91ED4B77D00C20EB2 /* EpisodesViewController.swift */; };
+		5FDAE7DC1ED4BAFC00C20EB2 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7DB1ED4BAFC00C20EB2 /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5FDAE7D41ED35E6A00C20EB2 /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		5FDAE7D51ED35E6A00C20EB2 /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		5FDAE7D91ED4B77D00C20EB2 /* EpisodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		5FDAE7DB1ED4BAFC00C20EB2 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				5FDAE7CD1ED3521800C20EB2 /* PodcastsViewController.swift */,
 				5FDAE7D91ED4B77D00C20EB2 /* EpisodesViewController.swift */,
+				5FDAE7DB1ED4BAFC00C20EB2 /* SplitViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				5FDAE7CE1ED3521800C20EB2 /* PodcastsViewController.swift in Sources */,
 				5FDAE7D61ED35E6A00C20EB2 /* SWXMLHash.swift in Sources */,
 				5FDAE7BC1ED34C0000C20EB2 /* AppDelegate.swift in Sources */,
+				5FDAE7DC1ED4BAFC00C20EB2 /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
