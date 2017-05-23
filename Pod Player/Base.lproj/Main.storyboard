@@ -788,7 +788,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GY3-De-K8k"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="XQY-X5-jf8">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="XQY-X5-jf8">
                                     <rect key="frame" x="1" y="387" width="198" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -824,10 +824,10 @@
             </objects>
             <point key="canvasLocation" x="612.5" y="422"/>
         </scene>
-        <!--View Controller-->
+        <!--Episodes View Controller-->
         <scene sceneID="bs7-Sl-mhN">
             <objects>
-                <viewController id="Gi3-Xl-XtJ" sceneMemberID="viewController">
+                <viewController id="Gi3-Xl-XtJ" customClass="EpisodesViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="QZ1-JK-Weh">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -857,6 +857,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="pausePlayClicked:" target="Gi3-Xl-XtJ" id="8LA-5y-M9k"/>
+                                </connections>
                             </button>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e43-Ck-trb">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="170"/>
@@ -905,6 +908,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Gi3-Xl-XtJ" id="djP-TZ-0Uw"/>
+                                                <outlet property="delegate" destination="Gi3-Xl-XtJ" id="Tfq-bY-1KW"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -927,6 +934,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="deleteClicked:" target="Gi3-Xl-XtJ" id="OYK-IM-FKM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -945,6 +955,12 @@
                             <constraint firstItem="e43-Ck-trb" firstAttribute="top" secondItem="eKQ-KD-Twm" secondAttribute="bottom" constant="10" id="ur5-Jb-P7q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="cYk-mF-aZ1" id="q98-dq-2er"/>
+                        <outlet property="pausePlayButton" destination="eKQ-KD-Twm" id="jsf-tv-9Nx"/>
+                        <outlet property="tableView" destination="89F-Ju-3KX" id="jWF-J4-Nyh"/>
+                        <outlet property="titleLabel" destination="mbT-I6-SYW" id="aWB-CH-Bmw"/>
+                    </connections>
                 </viewController>
                 <customObject id="hSA-GH-r8w" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
