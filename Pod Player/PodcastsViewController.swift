@@ -16,6 +16,7 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
  
     // MARK: - Variables
     var podcasts: [Podcast] = []
+    var episodesVC : EpisodesViewController? = nil
     
     // MARK: - Initialization
     override func viewDidLoad() {
@@ -85,13 +86,19 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
                                     
                                     fatalError("unable to save. \(error) \(error.userInfo)")
                                 }
-                                self.getPodcasts()                        }
+                                self.getPodcasts()
+                                
+                                DispatchQueue.main.async {
+                                    
+                                    self.podcastURLTextField.stringValue = ""
+                                }
+                            }
                         }
                     }
                 }
                 } .resume()
             
-            podcastURLTextField.stringValue = ""
+ 
             
         }
     }
@@ -153,7 +160,8 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
             
             let podcast = podcasts[tableView.selectedRow]
             
-            
+            episodesVC?.podcast = podcast
+            episodesVC?.updateView()
         }
     }
 }

@@ -681,7 +681,7 @@
         <!--Split View Controller-->
         <scene sceneID="PB9-sY-lCR">
             <objects>
-                <splitViewController id="I4o-Ed-AfF" sceneMemberID="viewController">
+                <splitViewController id="I4o-Ed-AfF" customClass="SplitViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="dXG-Gt-Y5Y"/>
                         <splitViewItem id="OFH-XI-59W"/>
@@ -691,6 +691,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
+                        <outlet property="episodesItem" destination="OFH-XI-59W" id="Ed3-AQ-h7p"/>
+                        <outlet property="podcastsItem" destination="dXG-Gt-Y5Y" id="NIg-he-DEc"/>
                         <segue destination="eXN-YP-3pW" kind="relationship" relationship="splitItems" id="4wN-ia-bBk"/>
                         <segue destination="Gi3-Xl-XtJ" kind="relationship" relationship="splitItems" id="sKZ-i3-gaC"/>
                     </connections>
@@ -887,7 +889,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="zjs-Tb-MDK">
+                                                        <tableCellView identifier="EpisodesCell" id="zjs-Tb-MDK">
                                                             <rect key="frame" x="1" y="1" width="447" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
