@@ -105,7 +105,15 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     
     @IBAction func pausePlayClicked(_ sender: Any) {
         
-        player?.pause()
+        if pausePlayButton.title == "Pause" {
+            
+            player?.pause()
+            pausePlayButton.title = "Play"
+        } else {
+            
+            player?.play()
+            pausePlayButton.title = "Pause"
+        }
         
     }
     
@@ -132,10 +140,8 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
                 
                 player = AVPlayer(url: url)
                 player?.play()
-                pausePlayButton.isHidden = false
             }
-            
-            
+            pausePlayButton.isHidden = false
         }
     }
 }
