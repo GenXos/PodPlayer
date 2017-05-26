@@ -16,6 +16,8 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var pausePlayButton: NSButton!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var deleteButton: NSButton!
+    
     
     //MARK: - Variables
     //
@@ -29,8 +31,9 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
         super.viewDidLoad()
         
         pausePlayButton.isHidden = true
-        imageView.image = nil
-        titleLabel.stringValue = ""
+        //imageView.image = nil
+        //titleLabel.stringValue = ""
+        updateView()
     }
     
     // MARK: - Functions
@@ -48,6 +51,16 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
             imageView.image = image
         } else {
             imageView.image = nil
+        }
+        
+        if podcast != nil {
+            
+            tableView.isHidden = false
+            deleteButton.isHidden = false
+        } else {
+            
+            tableView.isHidden = true
+            deleteButton.isHidden = true
         }
         
         getEpisodes()

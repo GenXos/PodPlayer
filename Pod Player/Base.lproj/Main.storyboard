@@ -831,12 +831,12 @@
         <scene sceneID="bs7-Sl-mhN">
             <objects>
                 <viewController id="Gi3-Xl-XtJ" customClass="EpisodesViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="QZ1-JK-Weh">
-                        <rect key="frame" x="0.0" y="0.0" width="566" height="432"/>
+                    <view key="view" misplaced="YES" id="QZ1-JK-Weh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-I6-SYW">
-                                <rect key="frame" x="18" y="387" width="410" height="25"/>
+                                <rect key="frame" x="18" y="387" width="444" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="W20-OK-NLe"/>
                                 </constraints>
@@ -847,7 +847,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-mF-aZ1">
-                                <rect key="frame" x="446" y="312" width="100" height="100"/>
+                                <rect key="frame" x="480" y="312" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6c6-sq-P93"/>
                                     <constraint firstAttribute="height" constant="100" id="wmc-6p-d8M"/>
@@ -865,19 +865,19 @@
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="168" horizontalPageScroll="10" verticalLineScroll="168" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e43-Ck-trb">
-                                <rect key="frame" x="0.0" y="0.0" width="566" height="302"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="302"/>
                                 <clipView key="contentView" id="BNp-zU-i8E">
-                                    <rect key="frame" x="1" y="0.0" width="564" height="301"/>
+                                    <rect key="frame" x="1" y="0.0" width="598" height="301"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="166" rowSizeStyle="automatic" headerView="jJS-SW-IEH" viewBased="YES" id="89F-Ju-3KX">
-                                            <rect key="frame" x="0.0" y="0.0" width="564" height="278"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="598" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="561" minWidth="40" maxWidth="1000" id="k3Z-Sf-Pox">
+                                                <tableColumn width="595" minWidth="40" maxWidth="1000" id="k3Z-Sf-Pox">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Episodes">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -891,11 +891,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="EpisodesCell" id="zjs-Tb-MDK" customClass="EpisodeCell" customModule="Pod_Player" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="561" height="166"/>
+                                                            <rect key="frame" x="1" y="1" width="595" height="166"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMN-ap-RgT">
-                                                                    <rect key="frame" x="1" y="139" width="449" height="24"/>
+                                                                    <rect key="frame" x="1" y="139" width="483" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="24" id="SSL-uu-9fp"/>
                                                                     </constraints>
@@ -906,7 +906,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Poy-iM-cc5">
-                                                                    <rect key="frame" x="466" y="139" width="94" height="24"/>
+                                                                    <rect key="frame" x="500" y="139" width="94" height="24"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="90" id="Oah-PR-b0A"/>
                                                                         <constraint firstAttribute="height" constant="24" id="n1q-AP-48x"/>
@@ -918,7 +918,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJ4-VM-MMe">
-                                                                    <rect key="frame" x="3" y="3" width="555" height="133"/>
+                                                                    <rect key="frame" x="3" y="3" width="589" height="133"/>
                                                                     <wkWebViewConfiguration key="configuration">
                                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                                         <wkPreferences key="preferences"/>
@@ -952,8 +952,11 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="I6K-qW-oU7"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="HWc-5s-0bj">
-                                    <rect key="frame" x="1" y="153" width="448" height="16"/>
+                                    <rect key="frame" x="1" y="285" width="298" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="B4F-3n-vHT">
@@ -961,7 +964,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="jJS-SW-IEH">
-                                    <rect key="frame" x="0.0" y="0.0" width="564" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="598" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -993,6 +996,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="pXJ-OY-wES" id="gpf-TY-agv"/>
                         <outlet property="imageView" destination="cYk-mF-aZ1" id="q98-dq-2er"/>
                         <outlet property="pausePlayButton" destination="eKQ-KD-Twm" id="jsf-tv-9Nx"/>
                         <outlet property="tableView" destination="89F-Ju-3KX" id="jWF-J4-Nyh"/>
