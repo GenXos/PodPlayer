@@ -18,6 +18,7 @@ class Episode {
     static let formatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"
+        // formatter.dateFormat = "MMM d, yyyy"
         return formatter
     }()
 

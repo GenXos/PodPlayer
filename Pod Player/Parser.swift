@@ -40,7 +40,7 @@ class Parser {
                 episode.htmlDescription = htmlDescription
             }
             
-            if let audioURL = item["link"].element?.text {
+            if let audioURL = item["enclosure"].element?.attribute(by: "url")?.text {
                 
                 episode.audioURL = audioURL
             }

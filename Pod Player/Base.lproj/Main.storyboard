@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -831,11 +832,11 @@
             <objects>
                 <viewController id="Gi3-Xl-XtJ" customClass="EpisodesViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="QZ1-JK-Weh">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="566" height="432"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-I6-SYW">
-                                <rect key="frame" x="18" y="255" width="294" height="25"/>
+                                <rect key="frame" x="18" y="387" width="410" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="W20-OK-NLe"/>
                                 </constraints>
@@ -846,7 +847,7 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-mF-aZ1">
-                                <rect key="frame" x="330" y="180" width="100" height="100"/>
+                                <rect key="frame" x="446" y="312" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="6c6-sq-P93"/>
                                     <constraint firstAttribute="height" constant="100" id="wmc-6p-d8M"/>
@@ -854,7 +855,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="yp1-Me-Fj0"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-KD-Twm">
-                                <rect key="frame" x="94" y="173" width="77" height="32"/>
+                                <rect key="frame" x="94" y="305" width="77" height="32"/>
                                 <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gv6-DV-dLB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -863,20 +864,20 @@
                                     <action selector="pausePlayClicked:" target="Gi3-Xl-XtJ" id="8LA-5y-M9k"/>
                                 </connections>
                             </button>
-                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e43-Ck-trb">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="170"/>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="168" horizontalPageScroll="10" verticalLineScroll="168" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e43-Ck-trb">
+                                <rect key="frame" x="0.0" y="0.0" width="566" height="302"/>
                                 <clipView key="contentView" id="BNp-zU-i8E">
-                                    <rect key="frame" x="1" y="0.0" width="448" height="169"/>
+                                    <rect key="frame" x="1" y="0.0" width="564" height="301"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="jJS-SW-IEH" viewBased="YES" id="89F-Ju-3KX">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="146"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="166" rowSizeStyle="automatic" headerView="jJS-SW-IEH" viewBased="YES" id="89F-Ju-3KX">
+                                            <rect key="frame" x="0.0" y="0.0" width="564" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="447" minWidth="40" maxWidth="1000" id="k3Z-Sf-Pox">
+                                                <tableColumn width="561" minWidth="40" maxWidth="1000" id="k3Z-Sf-Pox">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Episodes">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -889,22 +890,56 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="EpisodesCell" id="zjs-Tb-MDK">
-                                                            <rect key="frame" x="1" y="1" width="447" height="17"/>
+                                                        <tableCellView identifier="EpisodesCell" id="zjs-Tb-MDK" customClass="EpisodeCell" customModule="Pod_Player" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="561" height="166"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-Pg-hbF">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="447" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="8Rw-hW-Fi9">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMN-ap-RgT">
+                                                                    <rect key="frame" x="1" y="139" width="449" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="SSL-uu-9fp"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="gYy-BJ-zAx">
+                                                                        <font key="font" size="16" name="HelveticaNeue-Bold"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Poy-iM-cc5">
+                                                                    <rect key="frame" x="466" y="139" width="94" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="90" id="Oah-PR-b0A"/>
+                                                                        <constraint firstAttribute="height" constant="24" id="n1q-AP-48x"/>
+                                                                    </constraints>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="z43-DY-c8T">
+                                                                        <font key="font" size="13" name="HelveticaNeue"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJ4-VM-MMe">
+                                                                    <rect key="frame" x="3" y="3" width="555" height="133"/>
+                                                                    <wkWebViewConfiguration key="configuration">
+                                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                                        <wkPreferences key="preferences"/>
+                                                                    </wkWebViewConfiguration>
+                                                                </wkWebView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Poy-iM-cc5" firstAttribute="top" secondItem="zjs-Tb-MDK" secondAttribute="top" constant="3" id="4oc-iP-2dC"/>
+                                                                <constraint firstAttribute="bottom" secondItem="MJ4-VM-MMe" secondAttribute="bottom" constant="3" id="65J-qY-OVK"/>
+                                                                <constraint firstItem="rMN-ap-RgT" firstAttribute="top" secondItem="zjs-Tb-MDK" secondAttribute="top" constant="3" id="DRr-5c-JRO"/>
+                                                                <constraint firstItem="Poy-iM-cc5" firstAttribute="leading" secondItem="rMN-ap-RgT" secondAttribute="trailing" constant="20" id="WMI-X8-b1u"/>
+                                                                <constraint firstItem="MJ4-VM-MMe" firstAttribute="top" secondItem="rMN-ap-RgT" secondAttribute="bottom" constant="3" id="bIW-8C-muf"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Poy-iM-cc5" secondAttribute="trailing" constant="3" id="lCN-wD-wQN"/>
+                                                                <constraint firstAttribute="trailing" secondItem="MJ4-VM-MMe" secondAttribute="trailing" constant="3" id="sHF-Ie-fRX"/>
+                                                                <constraint firstItem="rMN-ap-RgT" firstAttribute="leading" secondItem="zjs-Tb-MDK" secondAttribute="leading" constant="3" id="sbZ-sB-110"/>
+                                                                <constraint firstItem="MJ4-VM-MMe" firstAttribute="leading" secondItem="zjs-Tb-MDK" secondAttribute="leading" constant="3" id="tVT-PA-oY1"/>
+                                                            </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="U6d-Pg-hbF" id="933-qG-Dl2"/>
+                                                                <outlet property="descriptionWebView" destination="MJ4-VM-MMe" id="8qE-H3-wGT"/>
+                                                                <outlet property="pubDateLabel" destination="Poy-iM-cc5" id="aMe-Ms-xQB"/>
+                                                                <outlet property="titleLabel" destination="rMN-ap-RgT" id="lLf-cn-eWh"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -917,7 +952,7 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="HWc-5s-0bj">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="HWc-5s-0bj">
                                     <rect key="frame" x="1" y="153" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -926,12 +961,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="jJS-SW-IEH">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="564" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pXJ-OY-wES">
-                                <rect key="frame" x="14" y="173" width="80" height="32"/>
+                                <rect key="frame" x="14" y="305" width="80" height="32"/>
                                 <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OBE-mh-MKw">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -966,7 +1001,7 @@
                 </viewController>
                 <customObject id="hSA-GH-r8w" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="861"/>
+            <point key="canvasLocation" x="779" y="927"/>
         </scene>
     </scenes>
 </document>

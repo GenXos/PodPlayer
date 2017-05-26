@@ -126,9 +126,21 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
         let episode = episodes[row]
-        let cell = tableView.make(withIdentifier: "EpisodesCell", owner: self) as? NSTableCellView
-        cell?.textField?.stringValue = episode.title
+        let cell = tableView.make(withIdentifier: "EpisodesCell", owner: self) as? EpisodeCell
+        cell?.titleLabel.stringValue = episode.title
+        cell?.descriptionWebView.loadHTMLString(episode.htmlDescription, baseURL: nil)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        
+        cell?.pubDateLabel.stringValue = dateFormatter.string(from: episode.pubDate)
+        
         return cell
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        
+        return 100
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
@@ -138,11 +150,13 @@ class EpisodesViewController: NSViewController, NSTableViewDataSource, NSTableVi
             let episode = episodes[tableView.selectedRow]
             if let url = URL(string: episode.audioURL) {
                 
+                player?.pause()
+                player = nil
                 player = AVPlayer(url: url)
                 player?.play()
             }
             pausePlayButton.isHidden = false
-        }
+            pausePlayButton.title = "Pause"        }
     }
 }
 

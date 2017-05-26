@@ -18,6 +18,7 @@
 		5FDAE7DA1ED4B77D00C20EB2 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7D91ED4B77D00C20EB2 /* EpisodesViewController.swift */; };
 		5FDAE7DC1ED4BAFC00C20EB2 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7DB1ED4BAFC00C20EB2 /* SplitViewController.swift */; };
 		5FDAE7DE1ED76DAD00C20EB2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7DD1ED76DAD00C20EB2 /* Episode.swift */; };
+		5FDAE7E01ED857F300C20EB2 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAE7DF1ED857F300C20EB2 /* EpisodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5FDAE7D91ED4B77D00C20EB2 /* EpisodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		5FDAE7DB1ED4BAFC00C20EB2 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		5FDAE7DD1ED76DAD00C20EB2 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		5FDAE7DF1ED857F300C20EB2 /* EpisodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				5FDAE7D21ED35A7F00C20EB2 /* Parser.swift */,
 				5FDAE7DD1ED76DAD00C20EB2 /* Episode.swift */,
+				5FDAE7DF1ED857F300C20EB2 /* EpisodeCell.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				5FDAE7DA1ED4B77D00C20EB2 /* EpisodesViewController.swift in Sources */,
 				5FDAE7C11ED34C0000C20EB2 /* Pod_Player.xcdatamodeld in Sources */,
 				5FDAE7CE1ED3521800C20EB2 /* PodcastsViewController.swift in Sources */,
+				5FDAE7E01ED857F300C20EB2 /* EpisodeCell.swift in Sources */,
 				5FDAE7D61ED35E6A00C20EB2 /* SWXMLHash.swift in Sources */,
 				5FDAE7BC1ED34C0000C20EB2 /* AppDelegate.swift in Sources */,
 				5FDAE7DE1ED76DAD00C20EB2 /* Episode.swift in Sources */,
